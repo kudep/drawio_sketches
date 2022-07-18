@@ -12,6 +12,6 @@ do
     OUT_FILE=$(echo $IN_FILE | sed -n 's/.\/\(.*\)\.drawio/'$BUILD_DIR'\/\1\.'$TYPE'/p')
     OUT_DIR=$(echo $IN_FILE | sed -n 's/.\/\(.*\)\/.*\.drawio/'$BUILD_DIR'\/\1/p')
     mkdir -p $OUT_DIR
-    [ "$IN_FILE" ] && [ "$OUT_FILE" ] && draw.io $IN_FILE -x -o $OUT_FILE -s 4;
+    [ "$IN_FILE" ] && [ "$OUT_FILE" ] && draw.io $IN_FILE -x -t -o $OUT_FILE -s 4;
 done
 touch $FINISH_DATE_FILE

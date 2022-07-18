@@ -21,7 +21,7 @@ svg: env
 type: env
 	@test -f $(TYPE_FILE) || $(MAKE) svg
 build: type
-	@utils/build.sh $(FINISH_DATE_FILE)  $(TYPE_FILE)  $(BUILD_DIR) 
+	@utils/build.sh $(FINISH_DATE_FILE) $(TYPE_FILE) $(BUILD_DIR) 
 clean:
 	@rm -rf $(BUILD_DIR)
 .PHONY: env png svg type build clean
